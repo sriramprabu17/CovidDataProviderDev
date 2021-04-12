@@ -1,0 +1,6 @@
+
+Data/.DS_Store
+*.pkl
+*.code-workspace
+*.pyc
+*.ipynb

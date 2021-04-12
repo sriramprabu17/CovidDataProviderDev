@@ -1,0 +1,30 @@
+{
+        "TC1" : {
+            "Description": "Ping Test",
+            "url" : "http://127.0.0.1:5000/",
+            "res" : "/api/ZIPCode?StartDate=YYYY-MM-DD&EndDate=YYYY-MM-DD"
+        },
+        "TC2" : {
+            "Description": "Test Data for 46217 & 2021-04-10'",
+            "url" : "http://127.0.0.1:5000/api/46217?StartDate=2021-04-10",
+            "res" : "[{'County': 'Marion, Indiana', 'Date': '2021-04-10 00:00:00', 'EstimatedCnt': 95132, 'Incident_Rate': 0.0029, 'PopulationCnt': 964582.0, 'RES_RATIO': 0.0295284, 'ZIP': 46217}]"
+        },
+    
+        "TC3" : {
+                "Description": "Invalid ZIP",
+                "url" : "http://127.0.0.1:5000/api/1234",
+                "res" : "Invalid ZIP Code or ZIP Code Data Not Available"
+            },
+        "TC4" : {
+            "Description": "Invalid Start Date",
+            "url" : "http://127.0.0.1:5000/api/46217?StartDate=112213",
+            "res" : "Data Not Available or Invalid StartDate - Valid Format YYYY-MM-DD"
+        },
+        "TC5" : {
+            "Description": "Invalid End Date",
+            "url" : "http://127.0.0.1:5000/api/46217?EndDate=112213",
+            "res" : "Data Not Available or Invalid EndDate - Valid Format YYYY-MM-DD"
+        }
+
+}
+
