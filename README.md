@@ -40,9 +40,29 @@ Installation Instructions
 
 ### Installation Instructions
 
-1. Copy Entire Folder Structure to local
-2. Update **Config.py** with path updates
-3. run **/Scripts/ETL/FullLoad.py** to do a initial load
-4. run **crontab crontab** to schedule daily load
-5. run **/Scripts/API/app.py** to spin up Flask Webserver
-6. run **/TestAPI/RunTestCases.py** to test the Flask API Endpoint
+Using the Folder
+1. Copy Entire Folder Structure to local ./CovidDataProvider/
+2. Build Docker image 
+3. Run the Docker Image
+4. Goto Local Host:5000
+5. API Usage  **Local Host:5000?<ZIPCODE>?StartDate=YYYY-MM-DD&EndDate=YYYY-MM-DD**
+
+## API Testing
+
+1. Open Docker Container 
+2. Run **./TestAPI/RunTestCases.py**
+3. This will execute Testcases in Json File TestCases.json
+
+### API Test Cases 
+1. Ping Test
+2. Sanity Test Data for one ZIP & Date
+3. Invalid ZIP Code
+4. Invalid Start Date 
+5. Invalid End Date
+
+#### To be added - Not Handled in API
+1.Missind Data for a ZIP/Date
+
+## Data Model
+**FactCovidCounts
+  |- LkpZipCode 
